@@ -18,7 +18,15 @@ import javax.servlet.http.HttpServletResponse;
 public class NuevaEmpresaServlet extends HttpServlet {
 
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("Iniciando a crear la empresa!");
+        String nombreEmpresa = req.getParameter("nombre");
+        
+        PrintWriter out = resp.getWriter();
+        out.println("<html><body>Empresa" + nombreEmpresa + " creada con exito!</body></html>");
+    }
+    
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("Iniciando a crear la empresa!");
         String nombreEmpresa = req.getParameter("nombre");
         

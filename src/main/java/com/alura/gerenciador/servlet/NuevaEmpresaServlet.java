@@ -1,13 +1,12 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package com.alura.gerenciador.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,18 +15,15 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Daniel Noriega
  */
-@WebServlet(urlPatterns = "/hola")
-public class holaMundoServlet extends HttpServlet{
+public class NuevaEmpresaServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("Iniciando a crear la empresa!");
+        String nombreEmpresa = req.getParameter("nombre");
+        
         PrintWriter out = resp.getWriter();
-        out.println("<html>");
-        out.println("<body>");
-        out.println("<h1>Hola mundo por tu servlet</h1>");
-        out.println("</body>");
-        out.println("</html>");    
+        out.println("<html><body>Empresa" + nombreEmpresa + " creada con exito!</body></html>");
     }
-    
     
 }

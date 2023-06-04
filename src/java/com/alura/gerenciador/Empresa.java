@@ -4,6 +4,8 @@
  */
 package com.alura.gerenciador;
 
+import java.util.Date;
+
 /**
  *
  * @author Daniel Noriega
@@ -12,6 +14,7 @@ public class Empresa {
     
     private Integer ID;
     private String nombre;
+    private Date fechaApertura = new Date();
 
     public Integer getID() {
         return ID;
@@ -28,5 +31,12 @@ public class Empresa {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
+
+    public Date getFechaApertura() {
+        return fechaApertura;
+    }
+
+    public void setFechaApertura(Date fechaApertura) {
+        this.fechaApertura = fechaApertura;
+    }
 }

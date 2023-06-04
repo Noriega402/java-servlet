@@ -14,6 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     <body>
         <form action="${linkServletNuevaEmpresa}" method="POST">
             Nuevo nombre de la empresa: <input type="text" name="nombre"/>
+            Fecha de apertura de la empresa: <input type="text" name="fecha"/>
             
             <input type="submit" value="Enviar">
         </form>

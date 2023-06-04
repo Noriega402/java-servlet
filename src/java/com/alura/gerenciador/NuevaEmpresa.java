@@ -33,7 +33,7 @@ public class NuevaEmpresa extends HttpServlet {
         
         //Llamada del JSP
         RequestDispatcher  rd = request.getRequestDispatcher("/nuevaEmpresaRegistrada.jsp");
-        request.setAttribute("nombreEmpresa", empresa.getNombre());
+        request.setAttribute("empresa", empresa.getNombre());
         rd.forward(request, response);//envio de respuestas al JSP
     }
 }

@@ -1,10 +1,4 @@
-<%
-    String empresa = (String) request.getAttribute("nombreEmpresa");
-    String nombre = "Daniel Noriega";
-    System.out.println(empresa);
-    System.out.println(nombre);
-%>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,7 +7,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Empresa <%= empresa %> registrada!</h1>
-        <h3><%= nombre %></h3>
+        <c:if test="${not empty empresa}">            
+            <h1>Empresa ${empresa} registrada!</h1>
+        </c:if>
+
+        <c:if test="${empty empresa}">
+            <h1>No se ha registrado ninguna empresa</h1>
+        </c:if>
     </body>
 </html>

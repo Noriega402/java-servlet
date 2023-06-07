@@ -24,6 +24,10 @@
         <servlet-name>ActualizarEmpresaServlet</servlet-name>
         <servlet-class>com.alura.gerenciador.ActualizarEmpresaServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ModificarEmpresaServlet</servlet-name>
+        <servlet-class>com.alura.gerenciador.ModificarEmpresaServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>servlet</servlet-name>
         <url-pattern>/servlet</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>ActualizarEmpresaServlet</servlet-name>
         <url-pattern>/actualizarEmpresa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModificarEmpresaServlet</servlet-name>
+        <url-pattern>/modificarEmpresa</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

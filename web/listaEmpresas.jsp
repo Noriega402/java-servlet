@@ -16,7 +16,11 @@
         </c:if>
         <ul>
             <c:forEach items="${empresas}" var="empresa">
-                <li>${ empresa.nombre } - <fmt:formatDate value="${empresa.fechaApertura}" pattern="dd/MM/yyyy"/></li>
+                <li>
+                    ${ empresa.nombre } - <fmt:formatDate value="${empresa.fechaApertura}" pattern="dd/MM/yyyy"/>
+                    <a href="actualizarEmpresa?id=${ empresa.id }">Modificar</a>
+                    <a href="eliminarEmpresa?id=${ empresa.id }">Eliminar</a>
+                </li>
             </c:forEach>
         </ul>
 </ul>

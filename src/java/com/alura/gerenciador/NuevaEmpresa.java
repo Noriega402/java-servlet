@@ -46,11 +46,13 @@ public class NuevaEmpresa extends HttpServlet {
 
         DB baseDeDatos = new DB();
         baseDeDatos.agregarEmpresa(empresa);
+        
+        response.sendRedirect("listaEmpresas");
 
         //Llamada del JSP
-        RequestDispatcher rd = request.getRequestDispatcher("/nuevaEmpresaRegistrada.jsp");
-        request.setAttribute("empresa", empresa.getNombre());
-        request.setAttribute("fechaApertura", empresa.getFechaApertura());
-        rd.forward(request, response);//envio de respuestas al JSP
+//        RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas");
+//        request.setAttribute("empresa", empresa.getNombre());
+//        request.setAttribute("fechaApertura", empresa.getFechaApertura());
+//        rd.forward(request, response);//envio de respuestas al JSP
     }
 }

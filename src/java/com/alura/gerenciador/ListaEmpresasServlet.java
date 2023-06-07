@@ -19,12 +19,12 @@ import java.util.List;
 public class ListaEmpresasServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         DB baseDeDatos = new DB();
         List<Empresa> listaEmpresas = baseDeDatos.getEmpresas();
-        RequestDispatcher rd = request.getRequestDispatcher("listaEmpresas.jsp");
         request.setAttribute("empresas", listaEmpresas);   
+        RequestDispatcher rd = request.getRequestDispatcher("listaEmpresas.jsp");
         rd.forward(request, response);
     }
 }
